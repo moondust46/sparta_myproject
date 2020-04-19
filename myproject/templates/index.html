@@ -17,9 +17,19 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
         center: new kakao.maps.LatLng(37.504487,127.048957), // 지도의 중심좌표
         level: 3 // 지도의 확대 레벨
     };
-
+    
 // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
-var map = new kakao.maps.Map(mapContainer, mapOption); 
+var map = new kakao.maps.Map(mapContainer, mapOption);
+// 입력한 키워드로 검색한다.
+var places = new kakao.maps.services.Places();
+
+var callback = function(result, status) {
+    if (status === kakao.maps.services.Status.OK) {
+        console.log(result);
+    }
+};
+
+places.keywordSearch('화장실', callback); 
 </script>
 </body>
 </html>
