@@ -3,12 +3,25 @@
 <head>
     <meta charset="utf-8">
     <title>지도 생성하기</title>
+    <!--JS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css')}}">
 
 </head>
 <body>
-<h1>지도야 나와라</h1>
+<h2>급해 급해- 가까운 화장실을 찾고 싶을 때</h2>
+
 <!-- 지도를 표시할 div 입니다 -->
-<div id="map" style="width:100%;height:350px;"></div>
+<div id="map" style="width:60%;height:500px;"></div>
 
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f2102e3d9529140fc789ce43af4e739e"></script>
 <script>
@@ -17,7 +30,7 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
         center: new kakao.maps.LatLng(37.504487,127.048957), // 지도의 중심좌표
         level: 3 // 지도의 확대 레벨
     };
-    
+
 // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
 var map = new kakao.maps.Map(mapContainer, mapOption);
 // 입력한 키워드로 검색한다.
@@ -29,7 +42,12 @@ var callback = function(result, status) {
     }
 };
 
-places.keywordSearch('화장실', callback); 
+places.keywordSearch('화장실', callback);
 </script>
+<br>
+<div class="button">
+<button type="button" class="btn btn-secondary btn-lg btn-block">BEST TOP5 화장실</button>
+</div>
+
 </body>
 </html>
