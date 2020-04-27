@@ -12,16 +12,25 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <!--Bootstrap CSS-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!--CSS-->
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css')}}">
+    <!--구글 폰트-->
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet" type="text/css">
+    <!--style-->
+    <style type="text/css">
+    * {
+    font-family: 'Jua', sans-serif;
+    }
+    </style>
 
 </head>
 <body>
-<h2>급해 급해- 가까운 화장실을 찾고 싶을 때</h2>
+
+<h2 style="text-align:center">급해 급해- 가까운 화장실을 찾고 싶을 때</h2>
 
 <!-- 지도를 표시할 div 입니다 -->
-<div id="map" style="width:60%;height:500px;"></div>
+<div id="map" style="width:50%;height:500px;margin:auto;"></div>
 
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f2102e3d9529140fc789ce43af4e739e"></script>
 <script>
