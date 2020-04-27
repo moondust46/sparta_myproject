@@ -42,6 +42,18 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
 
 // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
 var map = new kakao.maps.Map(mapContainer, mapOption);
+
+// 마커가 표시될 위치입니다 
+var markerPosition  = new kakao.maps.LatLng(37.504487,127.048957);
+
+// 마커를 생성합니다
+var marker = new kakao.maps.Marker({
+    position: markerPosition
+});
+
+// 마커가 지도 위에 표시되도록 설정합니다
+marker.setMap(map);
+
 // 입력한 키워드로 검색한다.
 var places = new kakao.maps.services.Places();
 
