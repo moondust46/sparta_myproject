@@ -47,7 +47,7 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
 // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
 var map = new kakao.maps.Map(mapContainer, mapOption);
 
-// 마커가 표시될 위치입니다 
+// 마커가 표시될 위치입니다
 var markerPosition  = new kakao.maps.LatLng(37.504487,127.048957);
 
 // 마커를 생성합니다
@@ -70,7 +70,7 @@ var callback = function(result, status) {
 places.keywordSearch('화장실', callback);
 </script>
 <br>
-<div class="button">
+<div class="button" style="margin: auto;padding: auto;width: 60%;">
 <button type="button" class="btn btn-secondary btn-lg btn-block">BEST TOP5 화장실</button>
 </div>
 
